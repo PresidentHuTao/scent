@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -17,22 +19,27 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "khach_hang")
+@Table(name = "san_pham")
 @Entity
-public class KhachHang {
+public class SanPham {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
-    @Column(name = "ten_khach_hang")
-    private String tenKhachHang;
-    @Column(name = "dia_chi")
-    private String diaChi;
-    @Column(name = "email")
-    private String email;
-    @Column(name = "sdt")
-    private String sdt;
+    @Column(name = "ten")
+    private String ten;
+    @Column(name = "mo_ta")
+    private String moTa;
+    @ManyToOne
+    @JoinColumn(name = "id_thuong_hieu")
+    private ThuongHieu thuongHieu;
+    @ManyToOne
+    @JoinColumn(name = "id_danh_muc")
+    private DanhMuc danhMuc;
     @JsonIgnore
-    @OneToMany(mappedBy = "khachHang")
-    List<DonHang> donHang;
+    @OneToMany(mappedBy = "sanPham")
+    List<HinhAnh> hinhAnh;
+    @JsonIgnore
+    @OneToMany(mappedBy = "sanPham")
+    List<Spct> spct;
 }

@@ -6,33 +6,35 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "khach_hang")
+@Table(name = "phieu_giam_gia")
 @Entity
-public class KhachHang {
+public class PhieuGiamGia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
-    @Column(name = "ten_khach_hang")
-    private String tenKhachHang;
-    @Column(name = "dia_chi")
-    private String diaChi;
-    @Column(name = "email")
-    private String email;
-    @Column(name = "sdt")
-    private String sdt;
+    @Column(name = "ma_giam_gia")
+    private String maGiamGia;
+    @Column(name = "gia_tri_giam", precision = 3, scale = 2)
+    private BigDecimal giaTriGiam;
+    @Column(name = "ngay_bat_dau")
+    private LocalDateTime ngayBatDau;
+    @Column(name = "ngay_het_han")
+    private LocalDateTime ngayHetHan;
     @JsonIgnore
-    @OneToMany(mappedBy = "khachHang")
-    List<DonHang> donHang;
+    @OneToOne(mappedBy = "phieuGiamGia")
+    private DonHang donHang;
+
 }

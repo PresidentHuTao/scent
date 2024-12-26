@@ -17,22 +17,19 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "khach_hang")
+@Table(name = "thanh_phan")
 @Entity
-public class KhachHang {
+public class ThanhPhan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
-    @Column(name = "ten_khach_hang")
-    private String tenKhachHang;
-    @Column(name = "dia_chi")
-    private String diaChi;
-    @Column(name = "email")
-    private String email;
-    @Column(name = "sdt")
-    private String sdt;
+    @Column(name = "ten_chat_lieu")
+    private String tenChatLieu;
+    @Column(name = "ty_le_thanh_phan")
+    private String tyLeThanhPhan;
     @JsonIgnore
-    @OneToMany(mappedBy = "khachHang")
-    List<DonHang> donHang;
+    @OneToMany(mappedBy = "thanhPhan")
+    List<Spct> spct;
 }
+
