@@ -12,7 +12,9 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
 import lombok.NoArgsConstructor;
+
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -48,5 +50,77 @@ public class Spct {
     @JsonIgnore
     @OneToMany(mappedBy = "spct")
     List<ChiTietDonHang> chiTietDonHang;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public BigDecimal getDonGia() {
+        return donGia;
+    }
+
+    public void setDonGia(BigDecimal donGia) {
+        this.donGia = donGia;
+    }
+
+    public Integer getSoLuongTonKho() {
+        return soLuongTonKho;
+    }
+
+    public void setSoLuongTonKho(Integer soLuongTonKho) {
+        this.soLuongTonKho = soLuongTonKho;
+    }
+
+    public String getTrangThai() {
+        return trangThai;
+    }
+
+    public void setTrangThai(String trangThai) {
+        this.trangThai = trangThai;
+    }
+
+    public SanPham getSanPham() {
+        return sanPham;
+    }
+
+    public void setSanPham(SanPham sanPham) {
+        this.sanPham = sanPham;
+    }
+
+    public DungTich getDungTich() {
+        return dungTich;
+    }
+
+    public void setDungTich(DungTich dungTich) {
+        this.dungTich = dungTich;
+    }
+
+    public MuiHuong getMuiHuong() {
+        return muiHuong;
+    }
+
+    public void setMuiHuong(MuiHuong muiHuong) {
+        this.muiHuong = muiHuong;
+    }
+
+    public ThanhPhan getThanhPhan() {
+        return thanhPhan;
+    }
+
+    public void setThanhPhan(ThanhPhan thanhPhan) {
+        this.thanhPhan = thanhPhan;
+    }
+
+    public List<ChiTietDonHang> getChiTietDonHang() {
+        return chiTietDonHang;
+    }
+
+    public void setChiTietDonHang(List<ChiTietDonHang> chiTietDonHang) {
+        this.chiTietDonHang = chiTietDonHang;
+    }
 }
 

@@ -3,15 +3,18 @@ package com.example.scent.service;
 
 import com.example.scent.entity.TaiKhoan;
 import com.example.scent.repo.TaiKhoanInterface;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class TaiKhoanSv {
-    @Autowired
+    final
     TaiKhoanInterface tki;
+
+    public TaiKhoanSv(TaiKhoanInterface tki) {
+        this.tki = tki;
+    }
 
 
     public List<TaiKhoan> getAll() {

@@ -10,13 +10,16 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
 import lombok.NoArgsConstructor;
+
 
 import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Table(name = "dung_tich")
 @Entity
 public class DungTich {
@@ -30,5 +33,28 @@ public class DungTich {
     @OneToMany(mappedBy = "dungTich")
     List<Spct> spct;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getTheTich() {
+        return theTich;
+    }
+
+    public void setTheTich(Integer theTich) {
+        this.theTich = theTich;
+    }
+
+    public List<Spct> getSpct() {
+        return spct;
+    }
+
+    public void setSpct(List<Spct> spct) {
+        this.spct = spct;
+    }
 }
 

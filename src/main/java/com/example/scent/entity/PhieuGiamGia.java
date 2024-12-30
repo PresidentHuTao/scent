@@ -10,7 +10,9 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
 import lombok.NoArgsConstructor;
+
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -18,6 +20,7 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Table(name = "phieu_giam_gia")
 @Entity
 public class PhieuGiamGia {
@@ -37,4 +40,51 @@ public class PhieuGiamGia {
     @OneToOne(mappedBy = "phieuGiamGia")
     private DonHang donHang;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getMaGiamGia() {
+        return maGiamGia;
+    }
+
+    public void setMaGiamGia(String maGiamGia) {
+        this.maGiamGia = maGiamGia;
+    }
+
+    public BigDecimal getGiaTriGiam() {
+        return giaTriGiam;
+    }
+
+    public void setGiaTriGiam(BigDecimal giaTriGiam) {
+        this.giaTriGiam = giaTriGiam;
+    }
+
+    public LocalDateTime getNgayBatDau() {
+        return ngayBatDau;
+    }
+
+    public void setNgayBatDau(LocalDateTime ngayBatDau) {
+        this.ngayBatDau = ngayBatDau;
+    }
+
+    public LocalDateTime getNgayHetHan() {
+        return ngayHetHan;
+    }
+
+    public void setNgayHetHan(LocalDateTime ngayHetHan) {
+        this.ngayHetHan = ngayHetHan;
+    }
+
+    public DonHang getDonHang() {
+        return donHang;
+    }
+
+    public void setDonHang(DonHang donHang) {
+        this.donHang = donHang;
+    }
 }

@@ -10,13 +10,16 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
 import lombok.NoArgsConstructor;
+
 
 import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Table(name = "khach_hang")
 @Entity
 public class KhachHang {
@@ -35,4 +38,52 @@ public class KhachHang {
     @JsonIgnore
     @OneToMany(mappedBy = "khachHang")
     List<DonHang> donHang;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getTenKhachHang() {
+        return tenKhachHang;
+    }
+
+    public void setTenKhachHang(String tenKhachHang) {
+        this.tenKhachHang = tenKhachHang;
+    }
+
+    public String getDiaChi() {
+        return diaChi;
+    }
+
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSdt() {
+        return sdt;
+    }
+
+    public void setSdt(String sdt) {
+        this.sdt = sdt;
+    }
+
+    public List<DonHang> getDonHang() {
+        return donHang;
+    }
+
+    public void setDonHang(List<DonHang> donHang) {
+        this.donHang = donHang;
+    }
 }

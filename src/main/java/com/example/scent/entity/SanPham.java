@@ -12,13 +12,16 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
 import lombok.NoArgsConstructor;
+
 
 import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Table(name = "san_pham")
 @Entity
 public class SanPham {
@@ -42,4 +45,60 @@ public class SanPham {
     @JsonIgnore
     @OneToMany(mappedBy = "sanPham")
     List<Spct> spct;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getTen() {
+        return ten;
+    }
+
+    public void setTen(String ten) {
+        this.ten = ten;
+    }
+
+    public String getMoTa() {
+        return moTa;
+    }
+
+    public void setMoTa(String moTa) {
+        this.moTa = moTa;
+    }
+
+    public ThuongHieu getThuongHieu() {
+        return thuongHieu;
+    }
+
+    public void setThuongHieu(ThuongHieu thuongHieu) {
+        this.thuongHieu = thuongHieu;
+    }
+
+    public DanhMuc getDanhMuc() {
+        return danhMuc;
+    }
+
+    public void setDanhMuc(DanhMuc danhMuc) {
+        this.danhMuc = danhMuc;
+    }
+
+    public List<HinhAnh> getHinhAnh() {
+        return hinhAnh;
+    }
+
+    public void setHinhAnh(List<HinhAnh> hinhAnh) {
+        this.hinhAnh = hinhAnh;
+    }
+
+    public List<Spct> getSpct() {
+        return spct;
+    }
+
+    public void setSpct(List<Spct> spct) {
+        this.spct = spct;
+    }
 }

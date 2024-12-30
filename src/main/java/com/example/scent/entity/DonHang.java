@@ -13,7 +13,9 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
 import lombok.NoArgsConstructor;
+
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -22,6 +24,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Table(name = "don_hang")
 @Entity
 public class DonHang {
@@ -54,4 +57,100 @@ public class DonHang {
     @OneToOne
     @JoinColumn(name = "id_phieu_giam_gia", unique = true)
     private PhieuGiamGia phieuGiamGia;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getTenNguoiNhanHang() {
+        return tenNguoiNhanHang;
+    }
+
+    public void setTenNguoiNhanHang(String tenNguoiNhanHang) {
+        this.tenNguoiNhanHang = tenNguoiNhanHang;
+    }
+
+    public String getDiaChiGiaoHang() {
+        return diaChiGiaoHang;
+    }
+
+    public void setDiaChiGiaoHang(String diaChiGiaoHang) {
+        this.diaChiGiaoHang = diaChiGiaoHang;
+    }
+
+    public String getSdtNguoiNhan() {
+        return sdtNguoiNhan;
+    }
+
+    public void setSdtNguoiNhan(String sdtNguoiNhan) {
+        this.sdtNguoiNhan = sdtNguoiNhan;
+    }
+
+    public String getGhiChu() {
+        return ghiChu;
+    }
+
+    public void setGhiChu(String ghiChu) {
+        this.ghiChu = ghiChu;
+    }
+
+    public BigDecimal getTongTien() {
+        return tongTien;
+    }
+
+    public void setTongTien(BigDecimal tongTien) {
+        this.tongTien = tongTien;
+    }
+
+    public String getPhuongThucVanChuyen() {
+        return phuongThucVanChuyen;
+    }
+
+    public void setPhuongThucVanChuyen(String phuongThucVanChuyen) {
+        this.phuongThucVanChuyen = phuongThucVanChuyen;
+    }
+
+    public LocalDateTime getNgayVanChuyen() {
+        return ngayVanChuyen;
+    }
+
+    public void setNgayVanChuyen(LocalDateTime ngayVanChuyen) {
+        this.ngayVanChuyen = ngayVanChuyen;
+    }
+
+    public String getPhuongThucThanhToan() {
+        return phuongThucThanhToan;
+    }
+
+    public void setPhuongThucThanhToan(String phuongThucThanhToan) {
+        this.phuongThucThanhToan = phuongThucThanhToan;
+    }
+
+    public KhachHang getKhachHang() {
+        return khachHang;
+    }
+
+    public void setKhachHang(KhachHang khachHang) {
+        this.khachHang = khachHang;
+    }
+
+    public List<ChiTietDonHang> getChiTietDonHang() {
+        return chiTietDonHang;
+    }
+
+    public void setChiTietDonHang(List<ChiTietDonHang> chiTietDonHang) {
+        this.chiTietDonHang = chiTietDonHang;
+    }
+
+    public PhieuGiamGia getPhieuGiamGia() {
+        return phieuGiamGia;
+    }
+
+    public void setPhieuGiamGia(PhieuGiamGia phieuGiamGia) {
+        this.phieuGiamGia = phieuGiamGia;
+    }
 }
