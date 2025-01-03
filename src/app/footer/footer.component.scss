@@ -1,0 +1,82 @@
+.logo1 img {
+    border-radius: 50%;
+    width: 250px;  /* Đặt chiều rộng cho logo */
+    height: auto;  /* Giữ tỉ lệ hình ảnh logo */
+    max-height: 180px; /* Giới hạn chiều cao nếu cần */
+    object-fit: contain; /* Đảm bảo hình ảnh không bị cắt */
+}
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 22%;
+    margin-bottom: 20px;
+}
+
+.logo-section h4 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo-section p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-column a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #007bff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-link {
+    font-size: 24px;
+    color: #ddd;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+.zalo-icon {
+    width: 32px;  /* Kích thước ảnh Zalo */
+    height: 32px;
+    border-radius: 50%;  /* Bo tròn để giống các icon mạng xã hội */
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-link:hover .zalo-icon {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);  /* Hiệu ứng khi hover */
+}
+

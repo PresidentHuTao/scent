@@ -1,0 +1,59 @@
+.logo img {
+    border-radius: 50%;
+    width: 150px;  /* Đặt chiều rộng cho logo */
+    height: auto;  /* Giữ tỉ lệ hình ảnh logo */
+    max-height: 80px; /* Giới hạn chiều cao nếu cần */
+    object-fit: contain; /* Đảm bảo hình ảnh không bị cắt */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+}
+
+.logo h1 a {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.navbar a {
+    margin-right: 25px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+.header-icons .icon-link {
+    margin-left: 15px;
+    color: #555;
+    font-size: 28px;
+    padding: 8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header-icons .icon-link:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    height: max;
+    object-fit: contain;  /* Hiển thị toàn bộ ảnh */
+    border-radius: 10px;
+    background-color: #f5f5f5;  /* Thêm nền để lấp khoảng trống */
+}
+

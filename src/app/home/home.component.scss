@@ -1,0 +1,95 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f8f8f8;
+    line-height: 1.6;
+}
+
+/* Header */
+
+/* Section sản phẩm */
+/* Section sản phẩm */
+.product-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    margin: 40px 0;
+    border-radius: 8px;
+}
+
+.product-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    margin-bottom: 40px;
+    text-align: left; /* Căn trái tiêu đề */
+}
+
+.product-section h2::before,
+.product-section h2::after {
+    content: "";
+    position: absolute;
+    height: 2px; /* Độ dày dòng kẻ */
+    background-color: #020b15; /* Màu dòng kẻ */
+    top: 50%; /* Căn giữa dòng kẻ với chiều cao chữ */
+    transform: translateY(-50%);
+}
+
+.product-section h2::before {
+    left: 0;
+    width: 0px; /* Độ dài dòng kẻ bên trái */
+    margin-left: 0px; /* Dịch chuyển để canh chỉnh */
+}
+
+.product-section h2::after {
+    right: 1px; /* Khoảng cách dòng kẻ từ bên phải */
+    width: 1160px; /* Độ dài dòng kẻ bên phải */
+}
+
+
+/* Bố cục sản phẩm */
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: #fff;
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Footer */
