@@ -1,31 +1,44 @@
 <app-header></app-header>
-<section class="product-section">
-    <h2>Tất cả sản phẩm</h2>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="path/to/product1.jpg" alt="Sản phẩm 1">
-            <h3>Nước hoa A</h3>
-            <p>1.500.000 VNĐ</p>
-            <button class="buy-btn">Mua ngay</button>
+<body>
+    <div class="container">
+        <h1 class="heading">Tất cả sản phẩm</h1>
+        <div class="filter-bar">
+           
+            <div class="filter-options">
+               
+                <span>Xếp theo:</span>
+                <button class="filter-btn active">Hàng mới</button>
+                <button class="filter-btn">Giá tăng dần</button>
+                <button class="filter-btn">Giá giảm dần</button>
+            </div>
         </div>
-        <div class="product-card">
-            <img src="path/to/product2.jpg" alt="Sản phẩm 2">
-            <h3>Nước hoa B</h3>
-            <p>2.000.000 VNĐ</p>
-            <button class="buy-btn">Mua ngay</button>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="perfume1.png" alt="Giorgio Armani">
+                <h3>Giorgio Armani Emporio Armani Stronger With You Absolutely Parfum</h3>
+                <p>0đ - 3.350.000đ</p>
+            </div>
+
+            <div class="product-card">
+                <img src="perfume2.png" alt="Jean Paul Gaultier">
+                <h3>Jean Paul Gaultier Le Male Le Parfum EDP</h3>
+                <p>290.000đ - 4.150.000đ</p>
+            </div>
+
+            <div class="product-card">
+                <img src="perfume3.png" alt="Dolce & Gabbana">
+                <h3>Dolce & Gabbana The One For Men EDP</h3>
+                <p>270.000đ - 4.025.000đ</p>
+            </div>
+
+            <div class="product-card">
+                <img src="perfume4.png" alt="Lattafa Eternal Oud">
+                <h3>Lattafa Eternal Oud EDP</h3>
+                <p>220.000đ - 1.750.000đ</p>
+            </div>
         </div>
-        <div class="product-card">
-            <img src="path/to/product3.jpg" alt="Sản phẩm 3">
-            <h3>Nước hoa C</h3>
-            <p>2.500.000 VNĐ</p>
-            <button class="buy-btn">Mua ngay</button>
-        </div>
-        <div class="product-card">
-            <img src="path/to/product4.jpg" alt="Sản phẩm 4">
-            <h3>Nước hoa D</h3>
-            <p>3.000.000 VNĐ</p>
-            <button class="buy-btn">Mua ngay</button>
-        </div>
+       
     </div>
-</section>
+</body>
+
 <app-footer></app-footer>

@@ -1,0 +1,98 @@
+.dashboard-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 8px 20px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .tab:hover {
+    background-color: #d6d6d6;
+  }
+  
+  .summary-container {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .summary-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .summary-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .summary-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .summary-item span {
+    display: block;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .btn-export {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+  }
+  
+  .btn-export:hover {
+    background-color: #218838;
+  }
+  
+  .chart-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .chart-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  

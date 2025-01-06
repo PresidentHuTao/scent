@@ -1,0 +1,75 @@
+<div class="invoice-container">
+    <h2 class="section-title">Hóa đơn</h2>
+  
+    <!-- Bộ lọc trạng thái đơn hàng -->
+    <div class="status-tabs">
+      <button class="tab active">Tất cả</button>
+      <button class="tab">Chờ xác nhận</button>
+      <button class="tab">Đang chuẩn bị</button>
+      <button class="tab">Đang giao</button>
+      <button class="tab">Đã hủy</button>
+      <button class="tab">Trả hàng/Hoàn tiền</button>
+      <button class="tab">Đã hoàn tiền</button>
+    </div>
+  
+    <!-- Bộ lọc ngày và hành động -->
+    <div class="filter-actions">
+      <label for="date-filter">Ngày tạo</label>
+      <input type="date" id="start-date">
+      <input type="date" id="end-date">
+  
+      <div class="action-buttons">
+        <button class="btn-export">Export data</button>
+        <select class="sort-dropdown">
+          <option value="id">Sort by: ID</option>
+          <option value="price">Sort by: Price</option>
+          <option value="date">Sort by: Date</option>
+        </select>
+      </div>
+    </div>
+  
+    <!-- Bảng dữ liệu hóa đơn -->
+    <table class="invoice-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Price</th>
+          <th>ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lattafa Eclaire EDP</td>
+          <td>Available</td>
+          <td>1.430.000đ</td>
+          <td>001</td>
+        </tr>
+        <tr>
+          <td>Lattafa Eclaire EDP</td>
+          <td>Available</td>
+          <td>1.430.000đ</td>
+          <td>002</td>
+        </tr>
+        <tr>
+          <td>Lattafa Eclaire EDP</td>
+          <td>Sold out</td>
+          <td>1.430.000đ</td>
+          <td>003</td>
+        </tr>
+        <tr>
+          <td>Lattafa Eclaire EDP</td>
+          <td>Available</td>
+          <td>1.430.000đ</td>
+          <td>004</td>
+        </tr>
+        <tr>
+          <td>Lattafa Eclaire EDP</td>
+          <td>Available</td>
+          <td>1.430.000đ</td>
+          <td>005</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

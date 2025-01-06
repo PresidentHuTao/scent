@@ -1,0 +1,104 @@
+<app-header></app-header>
+<div class="order-container">
+    <!-- Thông tin đặt hàng -->
+    <div class="customer-info">
+      <h3>Thông tin nhận hàng</h3>
+      <form>
+       
+        <div class="form-group">
+          <label for="name">Họ và tên</label>
+          <input type="text" id="name" placeholder="Họ và tên">
+        </div>
+        <div class="form-group">
+          <label for="phone">Số điện thoại (tùy chọn)</label>
+          <div class="phone-input">
+            <input type="tel" id="phone" placeholder="Số điện thoại">
+            <span class="flag-icon">🇻🇳</span>
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email">
+          </div>
+       
+        <div class="form-group">
+          <label for="city">Tỉnh thành</label>
+          <select id="city">
+            <option>Chọn tỉnh thành</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="district">Quận huyện (tùy chọn)</label>
+          <select id="district">
+            <option>Chọn quận huyện</option>
+          </select>
+        </div>
+        <div class="form-group">
+            <label for="address">Địa chỉ (tùy chọn)</label>
+            <input type="text" id="address" placeholder="Địa chỉ (tùy chọn)">
+          </div>
+        <div class="form-group">
+          <label for="note">Ghi chú (tùy chọn)</label>
+          <textarea id="note" placeholder="Ghi chú (tùy chọn)"></textarea>
+        </div>
+        
+      </form>
+    </div>
+  
+    <!-- Đơn hàng -->
+    <div class="order-summary">
+      <h3>Đơn hàng</h3>
+      <div class="order-item">
+        <input type="checkbox" checked>
+        <div class="item-info">
+          <span>Giorgio Armani Emporio Armani Stronger With You Absolutely Parfum</span>
+          <span>1.200.000đ</span>
+        </div>
+      </div>
+      <div class="order-item">
+        <input type="checkbox" checked>
+        <div class="item-info">
+          <span>Giorgio Armani Acqua di Giò Pour Homme Parfum</span>
+          <span>1.500.000đ</span>
+        </div>
+      </div>
+  
+      <!-- Mã giảm giá -->
+      <div class="discount-code">
+        <input type="text" placeholder="Nhập mã giảm giá">
+        <button type="button" class="apply-btn">Áp dụng</button>
+      </div>
+  
+      <!-- Tổng tiền -->
+      <div class="summary-info">
+        <p>Tạm tính: <strong>2.700.000đ</strong></p>
+        <p>Phí vận chuyển:</p>
+        <div class="payment-method">
+            <label class="main-label">Phí vận chuyển:</label>
+            <div class="radio-group">
+              <span class="radio-title">Thanh toán:</span>
+              <label class="radio-option">
+                <input style="width: 15Px;" type="radio" name="payment" value="online">
+                <span class="radio-text">Thanh toán qua ngân hàng trực tuyến</span>
+              </label>
+              <label class="radio-option">
+                <input style="width: 15Px;" type="radio" name="payment" value="cod">
+                <span class="radio-text">Thanh toán khi nhận hàng (COD)</span>
+              </label>
+            </div>
+          </div>
+          
+          
+          
+          
+          
+      </div>
+  
+      <!-- Xác nhận -->
+      <div class="total-confirm">
+        <p>Tổng tiền: <strong>2.700.000đ</strong></p>
+        <button type="submit" class="confirm-btn">Xác nhận</button>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>

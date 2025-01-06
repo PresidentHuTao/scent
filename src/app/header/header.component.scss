@@ -49,11 +49,32 @@
 }
 
 /* Banner */
-.banner img {
-    width: 100%;
-    height: max;
-    object-fit: contain;  /* Hiển thị toàn bộ ảnh */
+
+
+.shopping-cart-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Tăng chiều rộng lên 80% màn hình */
+    max-width: 900px; /* Giới hạn chiều rộng tối đa */
+    height: 80vh; /* Tăng chiều cao lên 80% màn hình */
+    background-color: white;
     border-radius: 10px;
-    background-color: #f5f5f5;  /* Thêm nền để lấp khoảng trống */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px; /* Tăng khoảng cách bên trong */
+    z-index: 1000;
 }
+
+.shopping-cart-container {
+    max-height: 100%; /* Chiều cao nội dung bằng với chiều cao container */
+    overflow-y: auto; /* Cuộn khi nội dung vượt quá */
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+}
+
 

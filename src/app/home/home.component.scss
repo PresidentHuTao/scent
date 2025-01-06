@@ -11,7 +11,13 @@ body {
     background-color: #f8f8f8;
     line-height: 1.6;
 }
-
+.banner img {
+    width: 100%;
+    height: max;
+    object-fit: contain;  /* Hiển thị toàn bộ ảnh */
+    border-radius: 10px;
+    background-color: #f5f5f5;  /* Thêm nền để lấp khoảng trống */
+}
 /* Header */
 
 /* Section sản phẩm */

@@ -1,9 +1,13 @@
 import { bootstrapApplication } from '@angular/platform-browser';
+import { HomeAdminComponent } from './app/admin/home-admin/home-admin.component';
+
 import { AppComponent } from './app/app.component';
 import { config } from './app/app.config.server';
 import { HomeComponent } from './app/home/home.component';
+import { OrderComponent } from './app/order/order.component';
+import { ProductDetailComponent } from './app/product-detail/product-detail.component';
 import { ProductComponent } from './app/product/product.component';
 
-const bootstrap = () => bootstrapApplication(AppComponent, config);
+const bootstrap = () => bootstrapApplication(HomeAdminComponent, config);
 
 export default bootstrap;

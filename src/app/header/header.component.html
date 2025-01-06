@@ -1,7 +1,6 @@
-
 <header class="header">
     <div class="logo">
-        <h1><img src="logo.webp" alt="" srcset=""></h1>
+        <h1><img src="logo.webp" alt=""></h1>
     </div>
     <nav class="navbar">
         <a routerLink="/">Trang chủ</a>
@@ -12,11 +11,16 @@
         <!-- Icon tìm kiếm -->
         <a href="#" class="icon-link"><i class="bi bi-search"></i></a>
         <!-- Icon giỏ hàng -->
-        <a href="#" class="icon-link"><i class="bi bi-cart"></i></a>
+        <a class="icon-link" (click)="toggleShoppingCart()">
+            <i class="bi bi-cart"></i>
+        </a>
     </div>
 </header>
 
-<!-- Banner -->
-<div class="banner">
-    <img src="banner1.jpg" alt="Banner Sản Phẩm">
+<!-- Popup giỏ hàng -->
+<div *ngIf="isShoppingCartOpen" class="shopping-cart-popup">
+    <div class="shopping-cart-container">
+        <span class="close-btn" (click)="closeShoppingCart()">&times;</span>
+        <app-shopping-cart></app-shopping-cart> <!-- Load component giỏ hàng -->
+    </div>
 </div>

@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .order-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Giúp các phần tử tự động xuống hàng trên màn hình nhỏ */
+  }
+  
+  .customer-info, .order-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .customer-info {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .order-summary {
+    width: 40%;
+    min-width: 300px;
+  }
+  
+  h3 {
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 60px;
+  }
+  
+  .phone-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .phone-input input {
+    flex: 1;
+  }
+  
+  .flag-icon {
+    padding: 0 10px;
+  }
+  
+  .order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .item-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 10px;
+  }
+  
+  .discount-code {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .discount-code input {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .apply-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .apply-btn:hover {
+    background-color: #555;
+  }
+  
+  .summary-info {
+    margin-top: 15px;
+  }
+  
+  .payment-method {
+    margin-top: 15px;
+  }
+  
+
+  
+  .radio-option span {
+    font-size: 16px;
+  }
+  
+  .total-confirm {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .confirm-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .confirm-btn:hover {
+    background-color: #218838;
+  }
+  .payment-method {
+    margin-top: 15px;
+  }
+  
+  .main-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các mục radio thành hàng dọc */
+    gap: 15px; /* Tạo khoảng cách giữa các mục */
+    padding-left: 0; /* Loại bỏ padding thụt vào */
+  }
+  
+
+  
+  .radio-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 0;
+  }
+  
+  .radio-text {
+    margin-left: 10px; /* Tạo khoảng cách giữa radio button và text */
+    font-size: 16px;
+  }
+  
+  
+  .radio-option span {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  
+ 
+  
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .order-container {
+      flex-direction: column; /* Chuyển thành cột dọc trên màn hình nhỏ */
+    }
+  
+    .order-summary {
+      width: 100%;
+    }
+  
+    .customer-info {
+      width: 100%;
+    }
+  
+    .total-confirm {
+      text-align: center;
+    }
+  
+    .radio-option {
+      justify-content: flex-start; /* Đảm bảo radio button nằm sát bên trái */
+    }
+  }
+  
