@@ -14,7 +14,16 @@
         <a class="icon-link" (click)="toggleShoppingCart()">
             <i class="bi bi-cart"></i>
         </a>
+        <ng-container >
+            <!-- *ngIf="isLoggedIn; else notLoggedIn" -->
+            <!-- <span class="username">Xin chào, {{ username }}</span> -->
+            <button class="logout-btn" >Đăng xuất</button>
+          </ng-container>
+          <ng-template #notLoggedIn>
+            <button class="login-btn" >Đăng nhập</button>
+          </ng-template>
     </div>
+
 </header>
 
 <!-- Popup giỏ hàng -->

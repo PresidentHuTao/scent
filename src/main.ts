@@ -6,6 +6,8 @@ import { ProductComponent } from './app/product/product.component';
 import { ProductDetailComponent } from './app/product-detail/product-detail.component';
 import { OrderComponent } from './app/order/order.component';
 import { HomeAdminComponent } from './app/admin/home-admin/home-admin.component';
+import { RegisterComponent } from './app/register/register.component';
+import { LoginComponent } from './app/login/login.component';
 
 
 bootstrapApplication(HomeAdminComponent, appConfig)
