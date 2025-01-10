@@ -1,15 +1,19 @@
 package com.example.scent.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 
 @Data
@@ -33,6 +37,9 @@ public class TaiKhoan {
     private String tenDangNhap;
     @Column(name = "mat_khau")
     private String matKhau;
+    @JsonIgnore
+    @OneToMany(mappedBy = "taiKhoan")
+    List<DonHang> donHang;
 
     public Integer getId() {
         return id;

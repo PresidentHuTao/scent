@@ -51,6 +51,9 @@ public class DonHang {
     @ManyToOne
     @JoinColumn(name = "id_khach_hang")
     private KhachHang khachHang;
+    @ManyToOne
+    @JoinColumn(name = "id_tai_khoan")
+    private TaiKhoan taiKhoan;
     @JsonIgnore
     @OneToMany(mappedBy = "donHang")
     List<ChiTietDonHang> chiTietDonHang;
