@@ -17,7 +17,7 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/rest/don-hang")
+@RequestMapping("/rest/don_hang")
 public class DonHangCtrl {
     final
     DonHangSv dhs;
