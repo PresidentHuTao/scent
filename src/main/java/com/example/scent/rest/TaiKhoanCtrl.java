@@ -24,6 +24,14 @@ public class TaiKhoanCtrl {
     public TaiKhoanCtrl(TaiKhoanSv tks) {
         this.tks = tks;
     }
+    @PostMapping("login")
+    public String login(@RequestBody TaiKhoan taiKhoan) {
+        return tks.verify(taiKhoan);
+    }
+    @PostMapping("register")
+    public TaiKhoan register(@RequestBody TaiKhoan taiKhoan) {
+        return tks.create(taiKhoan);
+    }
 
 
     @GetMapping("/getAll")
