@@ -1,9 +1,11 @@
 package com.example.scent.service;
 
+import com.example.scent.repo.TaiKhoanInterface;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,8 @@ import java.util.function.Function;
 
 @Service
 public class JWTSv {
+    @Autowired
+    TaiKhoanInterface tki;
     private String key = "";
 
     //tạo ra signature được mã hóa
@@ -37,6 +41,8 @@ public class JWTSv {
     //tạo ra jwt
     public String generateToken(String username) {
         Map<String, Object> claims = new HashMap<>();
+        String role = tki.getRole(username);
+        claims.put("roles", role);
         return Jwts.builder()
                 .claims()//bản đồ chứa các cấu hình payload tùy chỉnh của jwt
                 .add(claims)

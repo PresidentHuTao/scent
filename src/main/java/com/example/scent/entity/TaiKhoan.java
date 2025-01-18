@@ -37,6 +37,8 @@ public class TaiKhoan {
     private String tenDangNhap;
     @Column(name = "mat_khau")
     private String matKhau;
+    @Column(name = "vai_tro")
+    private String vaiTro;
     @JsonIgnore
     @OneToMany(mappedBy = "taiKhoan")
     List<DonHang> donHang;
@@ -87,5 +89,13 @@ public class TaiKhoan {
 
     public void setMatKhau(String matKhau) {
         this.matKhau = matKhau;
+    }
+
+    public String getVaiTro() {
+        return vaiTro;
+    }
+
+    public void setVaiTro(String vaiTro) {
+        this.vaiTro = vaiTro;
     }
 }

@@ -10,5 +10,6 @@ import org.springframework.stereotype.Repository;
 public interface TaiKhoanInterface extends JpaRepository<TaiKhoan, Integer>{
     @Query("SELECT tk FROM TaiKhoan tk WHERE tk.tenDangNhap = :tenDangNhap")
     TaiKhoan findByUsername(@Param("tenDangNhap") String tenDangNhap);
-
+    @Query("SELECT tk.vaiTro FROM TaiKhoan tk WHERE tk.tenDangNhap = :tenDangNhap")
+    String getRole(@Param("tenDangNhap") String tenDangNhap);
 }
