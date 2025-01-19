@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SpctSv {
@@ -18,6 +19,15 @@ public class SpctSv {
         return spcti.findAll();
     }
 
+    public Spct findById(Integer id) {
+        Optional<Spct> optional = spcti.findById(id);
+        return optional.isPresent() ? optional.get() : null;
+    }
+
+    public List<Spct> getAllByTenMuiHuong(String tenMuiHuong) {
+        System.out.println(tenMuiHuong);
+        return spcti.findAllByMuiHuong(tenMuiHuong);
+    }
 
     public Spct add(Spct spct) {
         return spcti.save(spct);
