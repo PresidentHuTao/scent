@@ -37,4 +37,8 @@ public class SanPhamSv {
     public SanPham detail(Integer id) {
         return spi.findById(id).get();
     }
+
+    public List<SanPham> searchByName(String name) {
+        return spi.findByTenContainingIgnoreCase(name);
+    }
 }
