@@ -2,6 +2,7 @@ package com.example.scent.rest;
 
 import com.example.scent.entity.SanPham;
 
+import com.example.scent.respone.SanPhamRespone;
 import com.example.scent.service.SanPhamSv;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -29,6 +31,11 @@ public class SanPhamCtrl {
     @GetMapping("/getAll")
     public List<SanPham> getAll() {
         return sps.getAll();
+    }
+
+    @GetMapping("/getAll/by-mui-huong")
+    public List<SanPhamRespone> getAllByMuiHuong(@RequestParam("tenMuiHuong") String muiHuong) {
+        return sps.findByMuiHuong(muiHuong);
     }
 
     @PostMapping("/add")
