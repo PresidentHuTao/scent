@@ -29,9 +29,7 @@ public class DungTich {
     private Integer id;
     @Column(name = "the_tich")
     private Integer theTich;
-    @JsonIgnore
-    @OneToMany(mappedBy = "dungTich")
-    List<Spct> spct;
+
 
     public Integer getId() {
         return id;
@@ -49,12 +47,6 @@ public class DungTich {
         this.theTich = theTich;
     }
 
-    public List<Spct> getSpct() {
-        return spct;
-    }
 
-    public void setSpct(List<Spct> spct) {
-        this.spct = spct;
-    }
 }
 

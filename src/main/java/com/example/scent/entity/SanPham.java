@@ -39,12 +39,17 @@ public class SanPham {
     @ManyToOne
     @JoinColumn(name = "id_danh_muc")
     private DanhMuc danhMuc;
-    @JsonIgnore
-    @OneToMany(mappedBy = "sanPham")
-    List<HinhAnh> hinhAnh;
-    @JsonIgnore
-    @OneToMany(mappedBy = "sanPham")
-    List<Spct> spct;
+    @ManyToOne
+    @JoinColumn(name = "id_huong_dau")
+    private HuongDau huongDau;
+
+    @ManyToOne
+    @JoinColumn(name = "id_huong_giua")
+    private HuongGiua huongGiua;
+    @ManyToOne
+    @JoinColumn(name = "id_huong_cuoi")
+    private HuongCuoi huongCuoi;
+
 
     public Integer getId() {
         return id;
@@ -86,19 +91,5 @@ public class SanPham {
         this.danhMuc = danhMuc;
     }
 
-    public List<HinhAnh> getHinhAnh() {
-        return hinhAnh;
-    }
 
-    public void setHinhAnh(List<HinhAnh> hinhAnh) {
-        this.hinhAnh = hinhAnh;
-    }
-
-    public List<Spct> getSpct() {
-        return spct;
-    }
-
-    public void setSpct(List<Spct> spct) {
-        this.spct = spct;
-    }
 }

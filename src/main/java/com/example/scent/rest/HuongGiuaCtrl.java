@@ -2,7 +2,9 @@ package com.example.scent.rest;
 
 import com.example.scent.entity.HuongDau;
 
+import com.example.scent.entity.HuongGiua;
 import com.example.scent.service.HuongDauSv;
+import com.example.scent.service.HuongGiuaSv;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,7 +44,7 @@ public class HuongGiuaCtrl {
     }
 
     @DeleteMapping("/del/{id}")
-    public void delete(@PathVariable Integer id) { has.delete(id);
+    public void delete(@PathVariable Integer id) { hgs.delete(id);
     }
 }
 

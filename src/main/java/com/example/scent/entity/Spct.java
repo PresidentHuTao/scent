@@ -41,15 +41,8 @@ public class Spct {
     @ManyToOne
     @JoinColumn(name = "id_dung_tich")
     private DungTich dungTich;
-    @ManyToOne
-    @JoinColumn(name = "id_mui_huong")
-    private MuiHuong muiHuong;
-    @ManyToOne
-    @JoinColumn(name = "id_thanh_phan")
-    private ThanhPhan thanhPhan;
-    @JsonIgnore
-    @OneToMany(mappedBy = "spct")
-    List<ChiTietDonHang> chiTietDonHang;
+
+
 
     public Integer getId() {
         return id;
@@ -99,28 +92,8 @@ public class Spct {
         this.dungTich = dungTich;
     }
 
-    public MuiHuong getMuiHuong() {
-        return muiHuong;
-    }
 
-    public void setMuiHuong(MuiHuong muiHuong) {
-        this.muiHuong = muiHuong;
-    }
 
-    public ThanhPhan getThanhPhan() {
-        return thanhPhan;
-    }
 
-    public void setThanhPhan(ThanhPhan thanhPhan) {
-        this.thanhPhan = thanhPhan;
-    }
-
-    public List<ChiTietDonHang> getChiTietDonHang() {
-        return chiTietDonHang;
-    }
-
-    public void setChiTietDonHang(List<ChiTietDonHang> chiTietDonHang) {
-        this.chiTietDonHang = chiTietDonHang;
-    }
 }
 

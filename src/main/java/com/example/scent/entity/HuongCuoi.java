@@ -25,9 +25,7 @@ public class HuongCuoi {
     private Integer id;
     @Column(name = "mota")
     private String mota;
-    @ManyToOne
-    @JoinColumn(name = "id_sp")
-    private SanPham sanPham;
+
 
     public Integer getId() {
         return id;
@@ -45,11 +43,5 @@ public class HuongCuoi {
         this.mota = mota;
     }
 
-    public SanPham getSanPham() {
-        return sanPham;
-    }
 
-    public void setSanPham(SanPham sanPham) {
-        this.sanPham = sanPham;
-    }
 }

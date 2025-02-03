@@ -31,9 +31,7 @@ public class DanhMuc {
     private String tenDanhMuc;
     @Column(name = "mo_ta")
     private String moTa;
-    @JsonIgnore
-    @OneToMany(mappedBy = "danhMuc")
-    List<SanPham> sanPham;
+
 
     public Integer getId() {
         return id;
@@ -59,12 +57,6 @@ public class DanhMuc {
         this.moTa = moTa;
     }
 
-    public List<SanPham> getSanPham() {
-        return sanPham;
-    }
 
-    public void setSanPham(List<SanPham> sanPham) {
-        this.sanPham = sanPham;
-    }
 }
 

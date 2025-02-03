@@ -39,9 +39,7 @@ public class TaiKhoan {
     private String matKhau;
     @Column(name = "vai_tro")
     private String vaiTro;
-    @JsonIgnore
-    @OneToMany(mappedBy = "taiKhoan")
-    List<DonHang> donHang;
+
 
     public Integer getId() {
         return id;

@@ -2,7 +2,9 @@ package com.example.scent.rest;
 
 import com.example.scent.entity.HuongCuoi;
 
+
 import com.example.scent.service.HuongCuoiSv;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +20,7 @@ import java.util.List;
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/rest/huong-cuoi")
-public class HuongDauCtrl {
+public class HuongCuoiCtrl {
     final
     HuongCuoiSv hcs;
 
@@ -28,7 +30,7 @@ public class HuongDauCtrl {
 
     @GetMapping("/getAll")
     public List<HuongCuoi> getAll() {
-        return hds.getAll();
+        return hcs.getAll();
     }
 
     @PostMapping("/add")
@@ -42,7 +44,7 @@ public class HuongDauCtrl {
     }
 
     @DeleteMapping("/del/{id}")
-    public void delete(@PathVariable Integer id) { has.delete(id);
+    public void delete(@PathVariable Integer id) { hcs.delete(id);
     }
 }
 
