@@ -48,7 +48,7 @@ public class JWTSv {
                 .add(claims)
                 .subject(username) //đặt subject là username
                 .issuedAt(new Date(System.currentTimeMillis())) //thời gian phát hành và có hiệu lực là thời điểm được tạo
-                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 5)) //jwt sẽ hết hạn sau 60s từ thời điểm được tạo ra
+                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60)) //jwt sẽ hết hạn sau 60s từ thời điểm được tạo ra
                 .and()
                 .signWith(getKey()) //ký jwt bằng phương thức đã tạo
                 .compact(); //tạo và trả về jwt dưới da23
