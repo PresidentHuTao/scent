@@ -2,6 +2,7 @@ package com.example.scent.rest;
 
 import com.example.scent.entity.SanPham;
 
+import com.example.scent.entity.Spct;
 import com.example.scent.service.SanPhamSv;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -43,6 +44,10 @@ public class SanPhamCtrl {
 
     @DeleteMapping("/del/{id}")
     public void delete(@PathVariable Integer id) { sps.delete(id);
+    }
+    @GetMapping("/detail/{id}")
+    public List<Spct> detail(@PathVariable Integer id){
+        return sps.detail(id);
     }
 }
 
