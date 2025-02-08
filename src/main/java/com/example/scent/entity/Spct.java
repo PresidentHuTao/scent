@@ -35,12 +35,12 @@ public class Spct {
     private Integer soLuongTonKho;
     @Column(name = "trang_thai")
     private String trangThai;
+    @Column(name = "dung_tich")
+    private Integer dungTich;
     @ManyToOne
     @JoinColumn(name = "id_san_pham")
     private SanPham sanPham;
-    @ManyToOne
-    @JoinColumn(name = "id_dung_tich")
-    private DungTich dungTich;
+
 
 
 
@@ -84,16 +84,12 @@ public class Spct {
         this.sanPham = sanPham;
     }
 
-    public DungTich getDungTich() {
+    public Integer getDungTich() {
         return dungTich;
     }
 
-    public void setDungTich(DungTich dungTich) {
+    public void setDungTich(Integer dungTich) {
         this.dungTich = dungTich;
     }
-
-
-
-
 }
 
