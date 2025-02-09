@@ -45,7 +45,7 @@ public class SpctCtrl {
     public void delete(@PathVariable Integer id) { spcts.delete(id);
     }
     @GetMapping("/getByidSanPham/{id}")
-    public Spct findByidSanPham(@PathVariable Integer id){
+    public List<Spct> findByidSanPham(@PathVariable Integer id){
         return spcts.findByidSanPham(id);
     }
 }
