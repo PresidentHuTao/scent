@@ -1,8 +1,10 @@
 package com.example.scent.rest;
 
-import com.example.scent.entity.MuiHuong;
+import com.example.scent.entity.HuongCuoi;
 
-import com.example.scent.service.MuiHuongSv;
+import com.example.scent.entity.HuongDau;
+import com.example.scent.service.HuongCuoiSv;
+import com.example.scent.service.HuongDauSv;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,33 +19,32 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/rest/mui-huong")
-public class MuiHuongCtrl {
+@RequestMapping("/rest/huong-dau")
+public class HuongDauCtrl {
     final
-    MuiHuongSv mhs;
+    HuongDauSv hds;
 
-    public MuiHuongCtrl(MuiHuongSv mhs) {
-        this.mhs = mhs;
+    public HuongDauCtrl(HuongDauSv hds) {
+        this.hds = hds;
     }
 
     @GetMapping("/getAll")
-    public List<MuiHuong> getAll() {
-        return mhs.getAll();
+    public List<HuongDau> getAll() {
+        return hds.getAll();
     }
 
     @PostMapping("/add")
-    public MuiHuong create(@RequestBody MuiHuong dt) {
-        return mhs.add(dt);
+    public HuongDau create(@RequestBody HuongDau hd) {
+        return hds.add(hd);
     }
 
     @PutMapping("/update")
-    public MuiHuong update(@RequestBody MuiHuong dt) {
-        return mhs.update(dt);
+    public HuongDau update(@RequestBody HuongDau hd) {
+        return hds.update(hd);
     }
 
     @DeleteMapping("/del/{id}")
-    public void delete(@PathVariable Integer id) { mhs.delete(id);
+    public void delete(@PathVariable Integer id) { hds.delete(id);
     }
 }
-
 

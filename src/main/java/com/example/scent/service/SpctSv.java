@@ -47,4 +47,7 @@ public class SpctSv {
     public Spct detail(Integer id) {
         return spcti.findById(id).get();
     }
+    public List<Spct> findByidSanPham(Integer id_san_pham){
+        return spcti.findByidSanPham(id_san_pham);
+    }
 }

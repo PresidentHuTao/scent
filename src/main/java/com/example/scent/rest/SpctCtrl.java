@@ -59,6 +59,10 @@ public class SpctCtrl {
     public void delete(@PathVariable Integer id) {
         spcts.delete(id);
     }
+    @GetMapping("/getByidSanPham/{id}")
+    public List<Spct> findByidSanPham(@PathVariable Integer id){
+        return spcts.findByidSanPham(id);
+    }
 }
 
 

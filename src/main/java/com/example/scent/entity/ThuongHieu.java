@@ -33,9 +33,7 @@ public class ThuongHieu {
     private String quocGia;
     @Column(name = "mo_ta")
     private String moTa;
-    @JsonIgnore
-    @OneToMany(mappedBy = "thuongHieu")
-    List<SanPham> sanPham;
+
 
     public Integer getId() {
         return id;
@@ -69,12 +67,6 @@ public class ThuongHieu {
         this.moTa = moTa;
     }
 
-    public List<SanPham> getSanPham() {
-        return sanPham;
-    }
 
-    public void setSanPham(List<SanPham> sanPham) {
-        this.sanPham = sanPham;
-    }
 }
 

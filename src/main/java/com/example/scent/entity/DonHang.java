@@ -54,9 +54,7 @@ public class DonHang {
     @ManyToOne
     @JoinColumn(name = "id_tai_khoan")
     private TaiKhoan taiKhoan;
-    @JsonIgnore
-    @OneToMany(mappedBy = "donHang")
-    List<ChiTietDonHang> chiTietDonHang;
+
     @OneToOne
     @JoinColumn(name = "id_phieu_giam_gia", unique = true)
     private PhieuGiamGia phieuGiamGia;
@@ -141,13 +139,7 @@ public class DonHang {
         this.khachHang = khachHang;
     }
 
-    public List<ChiTietDonHang> getChiTietDonHang() {
-        return chiTietDonHang;
-    }
-
-    public void setChiTietDonHang(List<ChiTietDonHang> chiTietDonHang) {
-        this.chiTietDonHang = chiTietDonHang;
-    }
+    
 
     public PhieuGiamGia getPhieuGiamGia() {
         return phieuGiamGia;

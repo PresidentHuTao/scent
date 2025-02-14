@@ -35,9 +35,7 @@ public class KhachHang {
     private String email;
     @Column(name = "sdt")
     private String sdt;
-    @JsonIgnore
-    @OneToMany(mappedBy = "khachHang")
-    List<DonHang> donHang;
+
 
     public Integer getId() {
         return id;
@@ -79,11 +77,5 @@ public class KhachHang {
         this.sdt = sdt;
     }
 
-    public List<DonHang> getDonHang() {
-        return donHang;
-    }
 
-    public void setDonHang(List<DonHang> donHang) {
-        this.donHang = donHang;
-    }
 }

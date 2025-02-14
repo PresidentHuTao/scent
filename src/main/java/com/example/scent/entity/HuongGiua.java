@@ -1,37 +1,30 @@
 package com.example.scent.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import lombok.NoArgsConstructor;
-
-
-import java.util.List;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
-@Table(name = "dung_tich")
+@Table(name = "huong_giua")
 @Entity
-public class DungTich {
+public class HuongGiua {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
-    @Column(name = "the_tich")
-    private Integer theTich;
-    @JsonIgnore
-    @OneToMany(mappedBy = "dungTich")
-    List<Spct> spct;
+    @Column(name = "mota")
+    private String mota;
+
 
     public Integer getId() {
         return id;
@@ -41,20 +34,13 @@ public class DungTich {
         this.id = id;
     }
 
-    public Integer getTheTich() {
-        return theTich;
+    public String getMota() {
+        return mota;
     }
 
-    public void setTheTich(Integer theTich) {
-        this.theTich = theTich;
+    public void setMota(String mota) {
+        this.mota = mota;
     }
 
-    public List<Spct> getSpct() {
-        return spct;
-    }
 
-    public void setSpct(List<Spct> spct) {
-        this.spct = spct;
-    }
 }
-

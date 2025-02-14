@@ -8,8 +8,14 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TaiKhoanInterface extends JpaRepository<TaiKhoan, Integer>{
-    @Query("SELECT tk FROM TaiKhoan tk WHERE tk.tenDangNhap = :tenDangNhap")
+//    @Query("SELECT tk FROM TaiKhoan tk WHERE tk.tenDangNhap = :tenDangNhap")
+//    TaiKhoan findByUsername(@Param("tenDangNhap") String tenDangNhap);
+//    @Query("SELECT tk.vaiTro FROM TaiKhoan tk WHERE tk.tenDangNhap = :tenDangNhap")
+//    String getRole(@Param("tenDangNhap") String tenDangNhap);
+    @Query(value = "select * from tai_khoan where ten_dang_nhap = :tenDangNhap", nativeQuery = true)
     TaiKhoan findByUsername(@Param("tenDangNhap") String tenDangNhap);
-    @Query("SELECT tk.vaiTro FROM TaiKhoan tk WHERE tk.tenDangNhap = :tenDangNhap")
+    @Query(value = "select vai_tro from tai_khoan where ten_dang_nhap = :tenDangNhap", nativeQuery = true)
     String getRole(@Param("tenDangNhap") String tenDangNhap);
+
+
 }

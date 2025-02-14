@@ -7,7 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 
 @Repository
@@ -24,5 +23,10 @@ public interface SanPhamInterface extends JpaRepository<SanPham, Integer> {
             """, nativeQuery = true)
     List<SanPhamRespone> findAllByMuiHuong(@Param("tenMuiHuong") String tenMuiHuong);
 
+
+public interface SanPhamInterface extends JpaRepository<SanPham, Integer>{
+    List<SanPham> findByTenContainingIgnoreCase(String ten);
+    @Query(value = "select * from spct where id_san_pham = :id", nativeQuery = true)
+    List<Spct> getAllSpctByIdSp(@Param("id") Integer id);
 }
 
