@@ -23,8 +23,6 @@ public interface SanPhamInterface extends JpaRepository<SanPham, Integer> {
             """, nativeQuery = true)
     List<SanPhamRespone> findAllByMuiHuong(@Param("tenMuiHuong") String tenMuiHuong);
 
-
-public interface SanPhamInterface extends JpaRepository<SanPham, Integer>{
     List<SanPham> findByTenContainingIgnoreCase(String ten);
     @Query(value = "select * from spct where id_san_pham = :id", nativeQuery = true)
     List<Spct> getAllSpctByIdSp(@Param("id") Integer id);

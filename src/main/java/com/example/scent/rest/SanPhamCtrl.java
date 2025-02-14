@@ -32,10 +32,10 @@ public class SanPhamCtrl {
         return sps.getAll();
     }
 
-    @GetMapping("/getAll/by-mui-huong")
-    public List<SanPhamRespone> getAllByMuiHuong(@RequestParam("tenMuiHuong") String muiHuong) {
-        return sps.findByMuiHuong(muiHuong);
-    }
+//    @GetMapping("/getAll/by-mui-huong")
+//    public List<SanPhamRespone> getAllByMuiHuong(@RequestParam("tenMuiHuong") String muiHuong) {
+//        return sps.findByMuiHuong(muiHuong);
+//    }
 
     @PostMapping("/add")
     public SanPham create(@RequestBody SanPham sp) {
