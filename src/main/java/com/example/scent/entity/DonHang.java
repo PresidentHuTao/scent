@@ -55,6 +55,7 @@ public class DonHang {
     @JoinColumn(name = "id_tai_khoan")
     private TaiKhoan taiKhoan;
 
+    // test
     @OneToOne
     @JoinColumn(name = "id_phieu_giam_gia", unique = true)
     private PhieuGiamGia phieuGiamGia;
