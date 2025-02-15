@@ -3,16 +3,18 @@ package com.example.scent.service;
 
 import com.example.scent.entity.DonHang;
 import com.example.scent.repo.DonHangInterface;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
+@RequiredArgsConstructor
 @Service
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class DonHangSv {
-    @Autowired
-    DonHangInterface dhi;
 
+    DonHangInterface dhi;
 
     public List<DonHang> getAll() {
         return dhi.findAll();
