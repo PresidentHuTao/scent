@@ -29,8 +29,14 @@ public class SanPham {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
+
+    @NotEmpty(message = "Tên sản phẩm không được để trống")
+    @Size(max = 100, message = "Tên sản phẩm không được vượt quá 100 ký tự")
     @Column(name = "ten")
     private String ten;
+
+    @NotEmpty(message = "Mô tả sản phẩm không được để trống")
+    @Size(max = 500, message = "Mô tả sản phẩm không được vượt quá 500 ký tự")
     @Column(name = "mo_ta")
     private String moTa;
     @ManyToOne
