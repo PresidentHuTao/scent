@@ -1,8 +1,10 @@
 package com.example.scent.rest;
 
-import com.example.scent.entity.DungTich;
+import com.example.scent.entity.HuongCuoi;
 
-import com.example.scent.service.DungTichSv;
+
+import com.example.scent.service.HuongCuoiSv;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,32 +19,32 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/rest/dung-tich")
-public class DungTichCtrl {
+@RequestMapping("/rest/huong-cuoi")
+public class HuongCuoiCtrl {
     final
-    DungTichSv dts;
+    HuongCuoiSv hcs;
 
-    public DungTichCtrl(DungTichSv dts) {
-        this.dts = dts;
+    public HuongCuoiCtrl(HuongCuoiSv hcs) {
+        this.hcs = hcs;
     }
 
     @GetMapping("/getAll")
-    public List<DungTich> getAll() {
-        return dts.getAll();
+    public List<HuongCuoi> getAll() {
+        return hcs.getAll();
     }
 
     @PostMapping("/add")
-    public DungTich create(@RequestBody DungTich dt) {
-        return dts.add(dt);
+    public HuongCuoi create(@RequestBody HuongCuoi hc) {
+        return hcs.add(hc);
     }
 
     @PutMapping("/update")
-    public DungTich update(@RequestBody DungTich dt) {
-        return dts.update(dt);
+    public HuongCuoi update(@RequestBody HuongCuoi hc) {
+        return hcs.update(hc);
     }
 
     @DeleteMapping("/del/{id}")
-    public void delete(@PathVariable Integer id) { dts.delete(id);
+    public void delete(@PathVariable Integer id) { hcs.delete(id);
     }
 }
 

@@ -1,7 +1,10 @@
 package com.example.scent.rest;
 
-import com.example.scent.entity.ThanhPhan;
-import com.example.scent.service.ThanhPhanSv;
+import com.example.scent.entity.HuongDau;
+
+import com.example.scent.entity.HuongGiua;
+import com.example.scent.service.HuongDauSv;
+import com.example.scent.service.HuongGiuaSv;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,33 +19,32 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/rest/thanh-phan")
-public class ThanhPhanCtrl {
+@RequestMapping("/rest/huong-giua")
+public class HuongGiuaCtrl {
     final
-    ThanhPhanSv tps;
+    HuongGiuaSv hgs;
 
-    public ThanhPhanCtrl(ThanhPhanSv tps) {
-        this.tps = tps;
+    public HuongGiuaCtrl(HuongGiuaSv hgs) {
+        this.hgs = hgs;
     }
 
     @GetMapping("/getAll")
-    public List<ThanhPhan> getAll() {
-        return tps.getAll();
+    public List<HuongGiua> getAll() {
+        return hgs.getAll();
     }
 
     @PostMapping("/add")
-    public ThanhPhan create(@RequestBody ThanhPhan tp) {
-        return tps.add(tp);
+    public HuongGiua create(@RequestBody HuongGiua hg) {
+        return hgs.add(hg);
     }
 
     @PutMapping("/update")
-    public ThanhPhan update(@RequestBody ThanhPhan tp) {
-        return tps.update(tp);
+    public HuongGiua update(@RequestBody HuongGiua hg) {
+        return hgs.update(hg);
     }
 
     @DeleteMapping("/del/{id}")
-    public void delete(@PathVariable Integer id) { tps.delete(id);
+    public void delete(@PathVariable Integer id) { hgs.delete(id);
     }
 }
-
 

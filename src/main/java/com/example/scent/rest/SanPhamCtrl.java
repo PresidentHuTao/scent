@@ -1,8 +1,8 @@
 package com.example.scent.rest;
 
 import com.example.scent.entity.SanPham;
-
 import com.example.scent.respone.SanPhamRespone;
+import com.example.scent.entity.Spct;
 import com.example.scent.service.SanPhamSv;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,8 +21,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/rest/san-pham")
 public class SanPhamCtrl {
-    final
-    SanPhamSv sps;
+    final SanPhamSv sps;
 
     public SanPhamCtrl(SanPhamSv sps) {
         this.sps = sps;
@@ -33,10 +32,10 @@ public class SanPhamCtrl {
         return sps.getAll();
     }
 
-    @GetMapping("/getAll/by-mui-huong")
-    public List<SanPhamRespone> getAllByMuiHuong(@RequestParam("tenMuiHuong") String muiHuong) {
-        return sps.findByMuiHuong(muiHuong);
-    }
+//    @GetMapping("/getAll/by-mui-huong")
+//    public List<SanPhamRespone> getAllByMuiHuong(@RequestParam("tenMuiHuong") String muiHuong) {
+//        return sps.findByMuiHuong(muiHuong);
+//    }
 
     @PostMapping("/add")
     public SanPham create(@RequestBody SanPham sp) {
@@ -49,8 +48,12 @@ public class SanPhamCtrl {
     }
 
     @DeleteMapping("/del/{id}")
-    public void delete(@PathVariable Integer id) { sps.delete(id);
+    public void delete(@PathVariable Integer id) {
+        sps.delete(id);
+    }
+
+    @GetMapping("/detail/{id}")
+    public List<Spct> detail(@PathVariable Integer id) {
+        return sps.detail(id);
     }
 }
-
-

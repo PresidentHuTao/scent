@@ -24,10 +24,10 @@ public class SpctSv {
         return optional.isPresent() ? optional.get() : null;
     }
 
-    public List<Spct> getAllByTenMuiHuong(String tenMuiHuong) {
-        System.out.println(tenMuiHuong);
-        return spcti.findAllByMuiHuong(tenMuiHuong);
-    }
+//    public List<Spct> getAllByTenMuiHuong(String tenMuiHuong) {
+//        System.out.println(tenMuiHuong);
+//        return spcti.findAllByMuiHuong(tenMuiHuong);
+//    }
 
     public Spct add(Spct spct) {
         return spcti.save(spct);
@@ -47,4 +47,7 @@ public class SpctSv {
     public Spct detail(Integer id) {
         return spcti.findById(id).get();
     }
+//    public List<Spct> findByidSanPham(Integer id_san_pham){
+//        return spcti.findByidSanPham(id_san_pham);
+//    }
 }

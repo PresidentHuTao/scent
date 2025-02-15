@@ -35,21 +35,14 @@ public class Spct {
     private Integer soLuongTonKho;
     @Column(name = "trang_thai")
     private String trangThai;
+    @Column(name = "dung_tich")
+    private Integer dungTich;
     @ManyToOne
     @JoinColumn(name = "id_san_pham")
     private SanPham sanPham;
-    @ManyToOne
-    @JoinColumn(name = "id_dung_tich")
-    private DungTich dungTich;
-    @ManyToOne
-    @JoinColumn(name = "id_mui_huong")
-    private MuiHuong muiHuong;
-    @ManyToOne
-    @JoinColumn(name = "id_thanh_phan")
-    private ThanhPhan thanhPhan;
-    @JsonIgnore
-    @OneToMany(mappedBy = "spct")
-    List<ChiTietDonHang> chiTietDonHang;
+
+
+
 
     public Integer getId() {
         return id;
@@ -91,36 +84,12 @@ public class Spct {
         this.sanPham = sanPham;
     }
 
-    public DungTich getDungTich() {
+    public Integer getDungTich() {
         return dungTich;
     }
 
-    public void setDungTich(DungTich dungTich) {
+    public void setDungTich(Integer dungTich) {
         this.dungTich = dungTich;
-    }
-
-    public MuiHuong getMuiHuong() {
-        return muiHuong;
-    }
-
-    public void setMuiHuong(MuiHuong muiHuong) {
-        this.muiHuong = muiHuong;
-    }
-
-    public ThanhPhan getThanhPhan() {
-        return thanhPhan;
-    }
-
-    public void setThanhPhan(ThanhPhan thanhPhan) {
-        this.thanhPhan = thanhPhan;
-    }
-
-    public List<ChiTietDonHang> getChiTietDonHang() {
-        return chiTietDonHang;
-    }
-
-    public void setChiTietDonHang(List<ChiTietDonHang> chiTietDonHang) {
-        this.chiTietDonHang = chiTietDonHang;
     }
 }
 
