@@ -8,6 +8,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -46,7 +47,6 @@ public class PhieuGiamGia {
 
     @NotNull(message = "Ngày hết hạn không được để trống")
     @FutureOrPresent(message = "Ngày hết hạn phải là ngày hiện tại hoặc trong tương lai")
-    @Column(name = "ngay_het_han")
     @Column(name = "ngay_het_han")
     private LocalDateTime ngayHetHan;
 
